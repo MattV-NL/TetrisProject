@@ -55,3 +55,5 @@ function draw() {
 }
 
 draw();
+
+//need to solve how to draw the created arrays for each of the pieces
