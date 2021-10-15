@@ -28,3 +28,30 @@ function play() {
 
 play();
 
+document.addEventListener("keydown", (event) => {
+    console.log(event.key)
+});
+
+const player = {
+    pos: { x:3, y: 3},
+    piece: z[1],
+};
+
+function drawTetromino(piece) {
+    piece.forEach((row, y) => {
+        row.forEach((value, x) => {
+            if (value !==0) {
+                ctx.fillSytle = "red";
+                ctx.fillRect(x , y, 1, 1);
+            }
+        });
+    });
+}
+
+function draw() {
+    ctx.fillSytle = "black";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    drawTetromino(piece.piece, piece.pos);
+}
+
+draw();
