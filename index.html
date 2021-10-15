@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris Project</title>
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>TETRIS</h1>
+    </div>
+    <div class="button-1">
+        <button class="play-button" id="play-button">PLAY</button>
+    </div>
+    <div class="score" id="score">
+        <h3>SCORE:</h3><span class="score-display" id="score-display">0</span>
+    </div>
+    <div class="grid" id="grid">
+        <canvas class="main-canvas" id="main-canvas" width="600px" height="600px"></canvas>
+    </div>
+    <div class="button-2">
+        <button class="reset-button" id="reset-button">RESET</button></div>
+</body>
+<script src="./scripts/tetrominos.js"></script>
+<script src="./scripts/main.js"></script>
+</html>
