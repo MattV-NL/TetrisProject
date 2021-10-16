@@ -166,3 +166,5 @@ const i = [
         0, 0, 0, 0
     ]
 ]
+
+const allTetrominos = [o, z, l, i, s, j, t]

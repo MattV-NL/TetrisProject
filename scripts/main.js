@@ -1,3 +1,5 @@
+//Set up play area
+
 const canvas = document.getElementById("main-canvas");
 const ctx = canvas.getContext("2d");
 const columns = 10;
@@ -21,39 +23,32 @@ class board {
     }
 }
 
-function play() {
+function newBoard() {
     board = new board(ctx);
     console.table(board.grid);
 }
 
-play();
+newBoard();
 
-document.addEventListener("keydown", (event) => {
-    console.log(event.key)
-});
+let currentPosition = 4;
+let currentRotation = 0;
+let random = Math.floor(Math.random()*allTetrominos.length);
 
-const player = {
-    pos: { x:3, y: 3},
-    piece: z[1],
-};
+console.log(random)
 
-function drawTetromino(piece) {
-    piece.forEach((row, y) => {
-        row.forEach((value, x) => {
-            if (value !==0) {
-                ctx.fillSytle = "red";
-                ctx.fillRect(x , y, 1, 1);
+let current = allTetrominos[random][currentRotation];
+
+function draw() {
+    current.forEach(value => {
+        if (value !== 0) {
+            for(let r = 0; r < current.length; r++) {
+                for(let c = 0; c < current.length; c++) {
+                    ctx.fillStyle = "red";
+                    ctx.fillRect(r, c, 1, 1);
+                }
             }
-        });
+        }
     });
 }
 
-function draw() {
-    ctx.fillSytle = "black";
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-    drawTetromino(piece.piece, piece.pos);
-}
-
 draw();
-
-//need to solve how to draw the created arrays for each of the pieces
