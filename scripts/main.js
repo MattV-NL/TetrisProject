@@ -38,13 +38,16 @@ console.log(random)
 
 let current = allTetrominos[random][currentRotation];
 
+let x = 5;
+let y = 0;
+
 function draw() {
     current.forEach(value => {
         if (value !== 0) {
             for(let r = 0; r < current.length; r++) {
                 for(let c = 0; c < current.length; c++) {
                     ctx.fillStyle = "red";
-                    ctx.fillRect(r, c, 1, 1);
+                    ctx.fillRect(x, y, 1, 1);
                 }
             }
         }
