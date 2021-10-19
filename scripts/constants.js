@@ -5,7 +5,23 @@ const scoreDisplay = document.getElementById('score-display');
 const startButton = document.getElementById('start-button');
 const resetButton = document.getElementById('reset-button');
 
-//Variables
+//display next piece to be shown on board
+const displaySqaures = document.querySelectorAll('.next-piece-display div');
+const displayWidth = 4
+let displayIndex = 0
+
+//see the pieces without all their rotations
+const nextUpTetrominos = [
+    [1, displayWidth + 1, displayWidth * 2 + 1, 2],
+    [0, 1, displayWidth + 1, displayWidth + 2],
+    [displayWidth, displayWidth + 1, displayWidth + 2, displayWidth * 2 + 1],
+    [0, 1, displayWidth, displayWidth + 1],
+    [1, 2, displayWidth, displayWidth +1],
+    [1, displayWidth +1, displayWidth * 2 +1, displayWidth * 3 + 1],
+    [0, displayWidth, displayWidth + 1, displayWidth + 2]
+]
+
+//Set up area of the board
 let squares = Array.from(document.querySelectorAll('.grid div'));
 
 //Tertominos

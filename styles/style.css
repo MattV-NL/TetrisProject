@@ -43,7 +43,7 @@ body {
     height: 400px;
     display: flex;
     flex-wrap: wrap;
-    background-color: yellow;
+    border: white solid 4px;
 }
 
 .grid div {
@@ -55,6 +55,15 @@ body {
     display: flex;
     justify-content: center;
     padding-bottom: 25px;
+}
+
+.next-piece-display {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    border: white solid 4px;
+    margin-left: 50px;
 }
 
 .button-2 {
