@@ -2,6 +2,7 @@ let currentPosition = 4;
 let currentRotation = 0;
 let random = Math.floor(Math.random() * allTetrominos.length);
 let current = allTetrominos[random][currentRotation];
+let nextRandom = 0;
 
 //draw the tetromino
 function draw() {
@@ -31,10 +32,12 @@ function moveDown() {
 function freeze() {
     if (current.some(index => squares[currentPosition + index + width].classList.contains('boundary'))) {
         current.forEach(index => squares[currentPosition + index].classList.add('boundary'))
-        random = Math.floor(Math.random() * allTetrominos.length)
+        random = nextRandom
+        nextRandom = Math.floor(Math.random() * allTetrominos.length)
         current = allTetrominos[random][currentRotation]
         currentPosition = 4
         draw();
+        displayShape();
     }
 }
 
@@ -88,5 +91,13 @@ function control(e) {
 
 document.addEventListener('keydown', control);
 
-//display next piece to be shown on board
-const displaySqaures = document.querySelectorAll('.next-piece-display div');
+function displayShape() {
+    displaySquares.forEach(square => {
+        square.classList.remove('tetromino');
+    })
+    nextUpTetrominos[nextRandom].forEach(index => {
+        displaySquares[displayIndex + index].classList.add('tetromino');
+    })
+}
+
+console.log()
