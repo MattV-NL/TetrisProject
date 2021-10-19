@@ -49,7 +49,6 @@ body {
 .grid div {
     width: 20px;
     height: 20px;
-    background-color: red;
 }
 
 .grid-container {
@@ -74,4 +73,8 @@ body {
     background-color: maroon;
     border: 2px solid gray;
     cursor: pointer;
+}
+
+.tetromino {
+    background-color: red;
 }
