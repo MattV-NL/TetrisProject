@@ -89,6 +89,20 @@ body {
     cursor: pointer;
 }
 
+.pause-button {
+    background-color: royalblue;
+    border: 2px solid white;
+    padding: 15px 50px 15px 50px;
+    cursor: pointer;
+}
+
+.pause-button:hover {
+    background-color: darkblue;
+    border: 2px solid white;
+    padding: 15px 50px 15px 50px;
+    cursor: pointer;
+}
+
 .tetromino {
     background-color: red;
 }

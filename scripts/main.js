@@ -20,10 +20,6 @@ function undraw() {
     })
 }
 
-//setting game time to auto move the tetrominos down the screen
-//comment out as you want it only to be called when you hit the start button
-//timerId = setInterval(moveDown, 1000);
-
 function moveDown() {
     undraw();
     currentPosition += width;
@@ -106,6 +102,7 @@ function displayShape() {
     })
 }
 
+//add funcitonality to start button
 startButton.addEventListener('click', () => {
     if (timerId) {
         clearInterval(timerId)
@@ -116,7 +113,21 @@ startButton.addEventListener('click', () => {
         nextRandom = Math.floor(Math.random() * allTetrominos.length);
         displayShape();
     }
+    changeButtonStyle();
 })
+
+//change start button to pause while playing the game
+function changeButtonStyle() {
+    if (startButton.classList.contains('start-button')) {
+        startButton.classList.remove('start-button');
+        startButton.classList.add('pause-button');
+        startButton.innerHTML = "PAUSE";
+    } else {
+        startButton.classList.remove('pause-button');
+        startButton.classList.add('start-button');
+        startButton.innerHTML = "START";
+    }
+}
 
 //adding score to the pieces and adding score to display
 function addScore() {
@@ -144,3 +155,8 @@ function gameOver() {
         clearInterval(timerId)
     }
 }
+
+//add funcitonality to reset button
+resetButton.addEventListener('click', () =>{
+    
+})
