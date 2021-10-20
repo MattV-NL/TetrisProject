@@ -19,14 +19,14 @@ body {
     justify-content: center;
 }
 
-.play-button {
+.start-button {
     border: 2px solid white;
     padding: 15px 50px 15px 50px;
     background-color: chartreuse;
     cursor: pointer;
 }
 
-.play-button:hover {
+.start-button:hover {
     background-color: darkgreen;
     border: 2px solid gray;
     cursor: pointer;

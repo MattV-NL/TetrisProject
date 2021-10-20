@@ -3,6 +3,8 @@ let currentRotation = 0;
 let random = Math.floor(Math.random() * allTetrominos.length);
 let current = allTetrominos[random][currentRotation];
 let nextRandom = 0;
+let timerId = null
+let score = 0
 
 //draw the tetromino
 function draw() {
@@ -19,7 +21,8 @@ function undraw() {
 }
 
 //setting game time to auto move the tetrominos down the screen
-timerId = setInterval(moveDown, 1000);
+//comment out as you want it only to be called when you hit the start button
+//timerId = setInterval(moveDown, 1000);
 
 function moveDown() {
     undraw();
@@ -38,6 +41,8 @@ function freeze() {
         currentPosition = 4
         draw();
         displayShape();
+        addScore();
+        gameOver();
     }
 }
 
@@ -91,6 +96,7 @@ function control(e) {
 
 document.addEventListener('keydown', control);
 
+//display next up tetromino in the small display next to the play area
 function displayShape() {
     displaySquares.forEach(square => {
         square.classList.remove('tetromino');
@@ -100,4 +106,41 @@ function displayShape() {
     })
 }
 
-console.log()
+startButton.addEventListener('click', () => {
+    if (timerId) {
+        clearInterval(timerId)
+        timerId = null
+    } else {
+        draw();
+        timerId = setInterval(moveDown, 1000);
+        nextRandom = Math.floor(Math.random() * allTetrominos.length);
+        displayShape();
+    }
+})
+
+//adding score to the pieces and adding score to display
+function addScore() {
+    for (let i = 0; i < 199; i += width) {
+        const row = [i, i+1, i+2, i+3, i+4, i+5, i+6, i+7, i+8, i+9]
+
+        if (row.every(index => squares[index].classList.contains('boundary'))) {
+            score += 10
+            scoreDisplay.innerHTML = score
+            row.forEach(index => {
+                squares[index].classList.remove('boundary')
+                squares[index].classList.remove('tetromino')
+            })
+            const squaresRemoved = squares.splice(i, width)
+            squares = squaresRemoved.concat(squares)
+            squares.forEach(cell => grid.appendChild(cell))
+        }
+    }
+}
+
+//defining game over
+function gameOver() {
+    if (current.some(index => squares[currentPosition + index].classList.contains('boundary'))) {
+        scoreDisplay.innerHTML = "GAME OVER"
+        clearInterval(timerId)
+    }
+}

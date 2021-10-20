@@ -23,7 +23,7 @@ const nextUpTetrominos = [
     //t tetromino
     [displayWidth, displayWidth + 1, displayWidth + 2, displayWidth * 2 + 1],
     //o tetromino
-    [displayWidth + 1, displayWidth + 2, displayWidth * 2 + 1, displayWidth * 2 + 1],
+    [displayWidth + 1, displayWidth + 2, displayWidth * 2 + 1, displayWidth * 2 + 2],
     //i tetromino
     [1, displayWidth + 1, displayWidth * 2 + 1, displayWidth * 3 + 1]
 ]
