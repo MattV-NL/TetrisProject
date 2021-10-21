@@ -10,6 +10,7 @@ let score = 0
 function draw() {
     current.forEach(index => {
         squares[currentPosition + index].classList.add('tetromino');
+        squares[currentPosition + index].style.backgroundColor = colors[random];
     })
 }
 
@@ -17,6 +18,7 @@ function draw() {
 function undraw() {
     current.forEach(index => {
         squares[currentPosition + index].classList.remove('tetromino');
+        squares[currentPosition + index].style.backgroundColor = '';
     })
 }
 
@@ -96,9 +98,11 @@ document.addEventListener('keydown', control);
 function displayShape() {
     displaySquares.forEach(square => {
         square.classList.remove('tetromino');
+        square.style.backgroundColor = '';
     })
     nextUpTetrominos[nextRandom].forEach(index => {
         displaySquares[displayIndex + index].classList.add('tetromino');
+        displaySquares[displayIndex + index].style.backgroundColor = colors[nextRandom];
     })
 }
 
@@ -135,11 +139,12 @@ function addScore() {
         const row = [i, i+1, i+2, i+3, i+4, i+5, i+6, i+7, i+8, i+9]
 
         if (row.every(index => squares[index].classList.contains('boundary'))) {
-            score += 10
+            score += 100
             scoreDisplay.innerHTML = score
             row.forEach(index => {
                 squares[index].classList.remove('boundary')
                 squares[index].classList.remove('tetromino')
+                squares[index].style.backgroundColor = '';
             })
             const squaresRemoved = squares.splice(i, width)
             squares = squaresRemoved.concat(squares)
@@ -149,14 +154,28 @@ function addScore() {
 }
 
 //defining game over
+let gameOverMessage = document.getElementById('gameover-message-background');
+let closeGameOver = document.getElementById('close-button');
+
 function gameOver() {
     if (current.some(index => squares[currentPosition + index].classList.contains('boundary'))) {
-        scoreDisplay.innerHTML = "GAME OVER"
+        gameOverMessage.style.display = 'flex'
         clearInterval(timerId)
     }
 }
 
-//add funcitonality to reset button
-resetButton.addEventListener('click', () =>{
-    
+
+//add funcitonality to reset button, not working yet
+resetButton.addEventListener('click', clearBoard)
+
+function clearBoard() {
+    for (let i = 0; i <= 199; i++) {
+        squares[i].classList.remove('tetromino');
+        squares[i].classList.remove('boundary');
+    }
+}
+
+//close button in gameover message
+closeGameOver.addEventListener('click', () => {
+    gameOverMessage.style.display = 'none';
 })

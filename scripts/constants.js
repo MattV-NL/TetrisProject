@@ -4,6 +4,15 @@ const width = 10;
 const scoreDisplay = document.getElementById('score-display');
 const startButton = document.getElementById('start-button');
 const resetButton = document.getElementById('reset-button');
+const colors = [
+    'orange',
+    'red',
+    'purple',
+    'blue',
+    'green',
+    'yellow',
+    'cyan'
+]
 
 //display next piece to be shown on board
 const displaySquares = document.querySelectorAll('.next-piece-display div');
@@ -11,21 +20,22 @@ const displayWidth = 4
 let displayIndex = 0
 
 //see the pieces without all their rotations
+
 const nextUpTetrominos = [
-    //l tetromnio
-    [1, displayWidth + 1, displayWidth * 2 + 1, displayWidth * 2 + 2],
-    //z tetromino
-    [displayWidth, displayWidth + 1, displayWidth * 2 + 1, displayWidth * 2 + 2],
-    //s tetromino
-    [displayWidth + 1, displayWidth + 2, displayWidth * 2, displayWidth * 2 + 1],
     //j tetromino
     [1, displayWidth + 1, displayWidth * 2, displayWidth * 2 + 1],
+    //i tetromino
+    [1, displayWidth + 1, displayWidth * 2 + 1, displayWidth * 3 + 1],
+    //s tetromino
+    [displayWidth + 1, displayWidth + 2, displayWidth * 2, displayWidth * 2 + 1],
+    //z tetromino
+    [displayWidth, displayWidth + 1, displayWidth * 2 + 1, displayWidth * 2 + 2],
     //t tetromino
     [displayWidth, displayWidth + 1, displayWidth + 2, displayWidth * 2 + 1],
     //o tetromino
     [displayWidth + 1, displayWidth + 2, displayWidth * 2 + 1, displayWidth * 2 + 2],
-    //i tetromino
-    [1, displayWidth + 1, displayWidth * 2 + 1, displayWidth * 3 + 1]
+    //l tetromnio
+    [1, displayWidth + 1, displayWidth * 2 + 1, displayWidth * 2 + 2]
 ]
 
 //Set up area of the board
@@ -37,7 +47,7 @@ const lTetromino = [
     [1, width + 1, width * 2 + 1, width * 2 + 2],
     [width, width + 1, width + 2, width * 2],
     [0, 1, width + 1, width * 2 + 1],
-    [width, width + 1, width + 2, 3]
+    [width, width + 1, width + 2, 2]
 ]
 
 const zTetromino = [
@@ -79,7 +89,7 @@ const jTetromino = [
     [0, width, width + 1, width + 2],
     [1, 2, width + 1, width * 2 + 1],
     [width, width + 1, width + 2, width * 2 + 2],
-    [1, width + 1, width * 2, width * 1 + 1]
+    [1, width + 1, width * 2, width * 2 + 1]
 ]
 
 const allTetrominos = [
