@@ -169,10 +169,12 @@ function gameOver() {
 resetButton.addEventListener('click', clearBoard)
 
 function clearBoard() {
-    for (let i = 0; i <= 199; i++) {
+    for (let i = 0; i < 200; i++) {
         squares[i].classList.remove('tetromino');
         squares[i].classList.remove('boundary');
+        squares[i].style.backgroundColor = '';
     }
+    undraw();
 }
 
 //close button in gameover message
