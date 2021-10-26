@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Press Start 2P', cursive;
     font-size: 16px;
     font-weight: normal;
     color: cyan;
@@ -11,6 +11,7 @@ body {
 .header {
    display: flex;
    justify-content: center;
+   width: 100%;
    font-size: 25px;
 }
 
@@ -143,4 +144,28 @@ body {
 
 .game-over-text {
     color: black;
+}
+
+.T {
+    color: red;
+}
+
+.E {
+    color: orange;
+}
+
+.T1 {
+    color: yellow;
+}
+
+.R {
+    color: green;
+}
+
+.I {
+    color: blue;
+}
+
+.S {
+    color: purple;
 }
