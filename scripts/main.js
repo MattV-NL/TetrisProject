@@ -164,7 +164,6 @@ function gameOver() {
     }
 }
 
-
 //add funcitonality to reset button, not working yet
 resetButton.addEventListener('click', clearBoard)
 

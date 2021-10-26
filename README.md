@@ -1,4 +1,4 @@
-# Welcome to my first game of Tetis
+# Welcome to my first game of Tetris
 
 ### This will be a game of Tetris created in HTML, CSS, and Javascript
 
@@ -9,6 +9,8 @@ If your pieces continue to stack up the screen and they reach the top it will be
 
 
 # The controls:
+
+You will be able to move the piece in the window using the arrow keys.
 
 Move Left: arrow left
 
