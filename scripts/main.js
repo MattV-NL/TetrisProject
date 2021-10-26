@@ -164,7 +164,6 @@ function gameOver() {
     }
 }
 
-
 //add funcitonality to reset button, not working yet
 resetButton.addEventListener('click', clearBoard)
 
@@ -173,11 +172,16 @@ function clearBoard() {
         squares[i].classList.remove('tetromino');
         squares[i].classList.remove('boundary');
         squares[i].style.backgroundColor = '';
+        score = 0;
+        scoreDisplay.innerHTML = score;
     }
+    draw();
     undraw();
 }
 
 //close button in gameover message
 closeGameOver.addEventListener('click', () => {
     gameOverMessage.style.display = 'none';
+    changeButtonStyle();
+    clearBoard();
 })

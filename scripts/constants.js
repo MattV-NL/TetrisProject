@@ -20,7 +20,6 @@ const displayWidth = 4
 let displayIndex = 0
 
 //see the pieces without all their rotations
-
 const nextUpTetrominos = [
     //j tetromino
     [1, displayWidth + 1, displayWidth * 2, displayWidth * 2 + 1],

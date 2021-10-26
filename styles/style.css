@@ -136,5 +136,6 @@ body {
     float: right;
     font-size: 24px;
     text-decoration: none;
+    color: cyan;
     cursor: pointer;
 }
