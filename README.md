@@ -23,3 +23,7 @@ rotate: arrow up
 Start button will change to pause button once it is pressed and will chagen back when clicked again.
 
 Reset button will clear the board and your score so you can start a new game from scratch.
+
+#### Author Issue
+
+I wanted to take this opportunity to explain that I did not know I needed to have my github account linked to my partners computer as I had estabilished a ssh key with my github account email and thought that was sufficient. Therefore there are commits on this repository that display it from another author "Kayla Normore" however I was the only person to work on this project. I have since fixed the problem.
