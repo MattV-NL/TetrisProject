@@ -175,6 +175,8 @@ function clearBoard() {
         score = 0;
         scoreDisplay.innerHTML = score;
     }
+    undraw();
+    currentPosition = 4;
     draw();
     undraw();
 }
@@ -182,6 +184,5 @@ function clearBoard() {
 //close button in gameover message
 closeGameOver.addEventListener('click', () => {
     gameOverMessage.style.display = 'none';
-    changeButtonStyle();
     clearBoard();
 })
