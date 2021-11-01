@@ -186,3 +186,16 @@ closeGameOver.addEventListener('click', () => {
     gameOverMessage.style.display = 'none';
     clearBoard();
 })
+
+//set up instructions window
+let instructionsButton = document.getElementById('instructions-button');
+let instructionsMessage = document.getElementById('instructions-message-background');
+let closeInstructions = document.getElementById('close-button-instructions');
+
+instructionsButton.addEventListener('click', () => {
+    instructionsMessage.style.display = 'flex';
+})
+
+closeInstructions.addEventListener('click', () => {
+    instructionsMessage.style.display = 'none';
+})
