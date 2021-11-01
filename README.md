@@ -18,11 +18,15 @@ Move Right: arrow right
 
 Speed up piece fall: arrow down
 
+Score will increase by 100 points for each row that is completely filled with pieces.
+
 rotate: arrow up
 
 Start button will change to pause button once it is pressed and will chagen back when clicked again.
 
 Reset button will clear the board and your score so you can start a new game from scratch.
+
+Instrucitons button will open a message giving the player details on how to play the game and how the score is calculated.
 
 #### Author Issue
 
