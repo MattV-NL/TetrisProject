@@ -50,7 +50,7 @@ body {
 .instructions-window {
     width: 80%;
     height: 22%;
-    margin-top: 25%;
+    margin-top: 15%;
     padding: 20px;
     padding-bottom: 40px;
     border-radius: 10px;
@@ -172,7 +172,7 @@ body {
     height: 10%;
     display: flex;
     justify-content: center;
-    margin-top: 25%;
+    margin-top: 15%;
     font-size: 35px;
     font-weight: bolder;
     border-radius: 10px;
