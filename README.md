@@ -35,3 +35,5 @@ When creating this project on my local machines I was able to load the project f
 #### Author Issue
 
 I wanted to take this opportunity to explain that I did not know I needed to have my github account linked to my partners computer as I had estabilished a ssh key with my github account email and thought that was sufficient. Therefore there are commits on this repository that display it from another author "Kayla Normore" however I was the only person to work on this project. I have since fixed the problem.
+
+test to see if author issue if fixed
