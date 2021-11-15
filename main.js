@@ -3,8 +3,8 @@ let currentRotation = 0;
 let random = Math.floor(Math.random() * allTetrominos.length);
 let current = allTetrominos[random][currentRotation];
 let nextRandom = 0;
-let timerId = null
-let score = 0
+let timerId = null;
+let score = 0;
 
 //draw the tetromino
 function draw() {
