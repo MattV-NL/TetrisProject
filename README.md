@@ -1,6 +1,6 @@
-# Welcome to my first game of Tetris
+# Tetris Project
 
-### This will be a game of Tetris created in HTML, CSS, and Javascript
+## This will be a game of Tetris created in HTML, CSS, and Javascript
 
 The goal of tetris is to keep the game going as long as possible.
 The pieces fall down the screen and you can rotate them to best position the pieces so you can fill the rows of the game board.
@@ -28,10 +28,10 @@ Reset button will clear the board and your score so you can start a new game fro
 
 Instrucitons button will open a message giving the player details on how to play the game and how the score is calculated.
 
-### Github-Pages Issue
+# Project Origin
+I made this project early in my learning to code journey.
+This project was made along side the tutorial https://www.youtube.com/watch?v=rAUn1Lom6dw
 
-When creating this project on my local machines I was able to load the project fine in a browser with and without using a live server extension however there is a problem with setting up Github-Pages so that people could try the game for themselves. The service seemed to be unable to search through the repository to find the CSS styling as it was inside a seperate folder. Once removed from the folder Github-Pages was able to read the style.css file except for the background image. I have removed the background image from all its folders but still when loading the page it brings back the error that it unable to be read. Going to try another image to see if there is a problem with the .jpg itself.
-
-#### Author Issue
-
-I wanted to take this opportunity to explain that I did not know I needed to have my github account linked to my partners computer as I had estabilished a ssh key with my github account email and thought that was sufficient. Therefore there are commits on this repository that display it from another author "Kayla Normore" however I was the only person to work on this project. I have since fixed the problem.
+# Takeaways
+What I was able to takeaway from this project was the way this project made me more comfortable with coding in general.
+Being able to see what my code did on screen and see how it worked hands on was a big turning point for me. Since this project I have went on to do more projects independantly which you can find here https://github.com/MattV-NL?tab=repositories I hope you check out my other projects to see how I have grown as a programmer.
